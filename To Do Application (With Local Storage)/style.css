@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+  margin: 20px 0;
   width: 500px;
 }
 
