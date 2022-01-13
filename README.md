@@ -4,4 +4,4 @@ mini web projects using HTML, CSS and JavaScript.
 
 |  #  | Project                                                                                                    | Live Demo                                                   |
 | :-: | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 001 | [To Do Application](https://github.com/slimanesedrati/JavaScript-Projects/tree/main/To%20Do%20Application%20) | [Live Demo](https://codepen.io/slimanesedrati/full/mdBxweX) |
+| 001 | [To Do Application](https://slimanesedrati.github.io/JavaScript-Projects/To%20Do%20Application%20(With%20Local%20Storage)/index.html) | [Live Demo](https://codepen.io/slimanesedrati/full/mdBxweX) |
