@@ -1,0 +1,115 @@
+:root {
+    --color_one : #eee;
+    --color_white : white;
+    --color_black : #121212;
+    --padding : 15px;
+    --tr : 0.3s;
+    --green : rgb(21, 141, 87);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New';
+    border-style: none;
+    outline: none;
+    box-sizing: border-box;
+}
+ 
+body {
+    padding: var(--padding);
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    padding: var(--padding);
+}
+
+.project .part-select {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: var(--padding);
+}
+
+.project .part-select #font-f select{
+    padding: 17px;
+    background-color: var(--color_white);
+    margin-right: var(--padding);
+    margin-top: 15px;
+    appearance: none;
+    cursor: pointer;
+    transition: var(--tr);
+}
+
+.project .part-select #font_w.green {
+    color: var(--green) ;
+} 
+
+
+
+.project .part-select #font_w ,
+.project .part-select #font_s *,
+.project .part-select #iverst_color
+{
+    padding: var(--padding);
+    background-color: var(--color_white);
+    margin-right: var(--padding);
+    margin-top: 15px;
+    cursor: pointer;
+    transition: var(--tr);
+}
+
+.project .part-select #font_s :nth-child(2) {
+    cursor:default;
+}
+
+.project .part-select #font_w:hover,
+.project .part-select #font_s *:not(:nth-child(2)):hover,
+.project .part-select #iverst_color :hover {
+    background-color: rgb(228, 224, 224);
+}
+
+
+
+.part-select #font_s {
+    display: flex;
+}
+
+.part-select #font_s #m ,
+.part-select #font_s #value_size{
+    margin-right: 5px;
+}
+
+
+.part-select #font_s #m.min {
+    color: rgb(180, 171, 171);
+    cursor: not-allowed;
+}
+.part-select #font_s #p.max {
+    color: rgb(180, 171, 171);
+}
+
+.project .part-select #iverst_color.green {
+    color: var(--green);
+}
+
+.project #text {
+    background-color: var(--color_white);
+    padding: var(--padding);
+    line-height: 1.3;
+    transition: var(--tr);
+}
+
+.project #text.black{
+    background-color: var(--color_black);
+    color: var(--color_white);
+}
+
+.project #text.white{
+    background-color: var(--color_white);
+    color: var(--color_black);
+}
+
