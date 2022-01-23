@@ -9,7 +9,7 @@ let text = document.getElementById("text")
 
 
 // Change Font family
-slect_font_family.addEventListener("blur",(e) => {
+slect_font_family.addEventListener("click",(e) => {
     text.style.fontFamily = e.target.value
 })
 
