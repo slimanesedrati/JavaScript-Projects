@@ -1,19 +1,19 @@
-let slect_font_family = document.getElementById("f_f")
-let font_weight = document.getElementById("font_w")
-let font_size = document.getElementById("font_s")
-let change_bc_text = document.getElementById("iverst_color")
-let value_font_size = document.getElementById("value_size")
-let p = document.getElementById("p")
-let m = document.getElementById("m")
-let text = document.getElementById("text")
+let slect_font_family = document.getElementById("f_f"),
+    font_weight = document.getElementById("font_w"),
+    font_size = document.getElementById("font_s"),
+    change_bc_text = document.getElementById("iverst_color"),
+    value_font_size = document.getElementById("value_size"),
+    p = document.getElementById("p"),
+    m = document.getElementById("m"),
+    text = document.getElementById("text");
 
 
 // Change Font family
-slect_font_family.addEventListener("click",(e) => {
+slect_font_family.addEventListener("change",(e) => {
     text.style.fontFamily = e.target.value
 })
 
-// Change size
+// Change Font size
 p.onclick = () => {
     if (+value_font_size.innerHTML >= 21 ) {
         p.disabled = true
