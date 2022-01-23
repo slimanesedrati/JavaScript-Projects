@@ -1,79 +1,65 @@
-let slect_font_family = document.getElementById("f_f"),
-    font_weight = document.getElementById("font_w"),
-    font_size = document.getElementById("font_s"),
-    change_bc_text = document.getElementById("iverst_color"),
-    value_font_size = document.getElementById("value_size"),
-    p = document.getElementById("p"),
-    m = document.getElementById("m"),
+
+let select_family = document.getElementById("select_family"),
+    font_weight = document.getElementById("font_weight"),
+    font_size = document.getElementById("font_size"),
+    iverst_color = document.getElementById("iverst_color"),
+    current_size = document.getElementById("current_size"),
+    plus = document.getElementById("plus"),
+    minus = document.getElementById("minus"),
     text = document.getElementById("text");
 
 
 // Change Font family
-slect_font_family.addEventListener("change",(e) => {
+select_family.addEventListener("change",(e) => {
     text.style.fontFamily = e.target.value
 })
 
 // Change Font size
-p.onclick = () => {
-    if (+value_font_size.innerHTML >= 21 ) {
-        p.disabled = true
-        p.classList.add("max")
-        p.style.cursor = 'not-allowed'
-        value_font_size.innerHTML = +value_font_size.innerHTML+1
-        text.style.fontSize = `${value_font_size.innerHTML}px`
+plus.onclick = () => {
+    if (+current_size.innerHTML >= 21 ) {
+        plus.disabled = true
+        plus.classList.add("max")
+        plus.style.cursor = 'not-allowed'
+        current_size.innerHTML = +current_size.innerHTML+1
+        text.style.fontSize = `${current_size.innerHTML}px`
     }
     else {
-        m.disabled = false
-        value_font_size.innerHTML = +value_font_size.innerHTML+1
-        m.classList.remove("min")
-        text.style.fontSize = `${value_font_size.innerHTML}px`
-        p.style.cursor = 'pointer'
+        minus.disabled = false
+        current_size.innerHTML = +current_size.innerHTML+1
+        minus.classList.remove("min")
+        text.style.fontSize = `${current_size.innerHTML}px`
+        plus.style.cursor = 'pointer'
     }
 }
 
-m.addEventListener("click",(e) => {
-    if (+value_font_size.innerHTML <= 16 ) {
-        m.disabled = true
-        m.classList.add("min")
-        text.style.fontSize = `${value_font_size.innerHTML}px`
+minus.addEventListener("click",(e) => {
+    if (+current_size.innerHTML <= 17 ) {
+        current_size.innerHTML = 16
+        minus.disabled = true
+        minus.classList.add("min")
+        text.style.fontSize = `${current_size.innerHTML}px`
     }
     else {
-        p.disabled = false
-        value_font_size.innerHTML = +value_font_size.innerHTML-1
-        text.style.fontSize = `${value_font_size.innerHTML}px`
-        p.classList.remove("max")
-        p.style.cursor = 'pointer'
+        plus.disabled = false
+        current_size.innerHTML = +current_size.innerHTML-1
+        text.style.fontSize = `${current_size.innerHTML}px`
+        plus.classList.remove("max")
+        plus.style.cursor = 'pointer'
     }
 
 })
 
 
-
-
-// Change FontWeight to Bold
-font_weight.onclick = () => {
-    if(font_weight.classList.contains("green")) {
-        font_weight.classList.remove("green")
-        text.style.fontWeight = 'normal'
-    }
-    else {
-        font_weight.classList.add("green")
-        text.style.fontWeight = 'bold'
-    }
-}
-
 // Change BackgroundColor To black
-change_bc_text.onclick = () => {
+iverst_color.onclick = () => {
     if(text.classList.contains("white")) {
         text.classList.remove("white")
         text.classList.add('black')
-        change_bc_text.classList.add('green')
+        iverst_color.classList.add('green')
     }
     else {
         text.classList.remove("black")
         text.classList.add('white')
-        change_bc_text.classList.remove('green')
+        iverst_color.classList.remove('green')
     }
 }
-
-
