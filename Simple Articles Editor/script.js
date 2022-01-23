@@ -49,6 +49,18 @@ minus.addEventListener("click",(e) => {
 
 })
 
+// Change FontWeight to Bold
+font_weight.onclick = () => {
+    if(font_weight.classList.contains("green")) {
+        font_weight.classList.remove("green")
+        text.style.fontWeight = 'normal'
+    }
+    else {
+        font_weight.classList.add("green")
+        text.style.fontWeight = 'bold'
+    }
+}
+
 
 // Change BackgroundColor To black
 iverst_color.onclick = () => {
